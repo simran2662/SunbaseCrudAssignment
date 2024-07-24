@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add/Edit Customer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .customer-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="customer-container">
+        <h2>Add/Edit Customer</h2>
+        <form id="addCustomerForm">
+            <!-- ID field (hidden) -->
+            <input type="hidden" id="customerId" name="customerId">
+            
+            <!-- Other fields for customer details -->
+            <label for="firstName"><b>First Name</b></label>
+            <input type="text" id="firstName" name="firstName" required>
+            <br>
+            <label for="lastName"><b>Last Name</b></label>
+            <input type="text" id="lastName" name="lastName" required>
+            <br>
+            <label for="street"><b>Street</b></label>
+            <input type="text" id="street" name="street" required>
+            <br>
+            <label for="address"><b>Address</b></label>
+            <input type="text" id="address" name="address" required>
+            <br>
+            <label for="city"><b>City</b></label>
+            <input type="text" id="city" name="city" required>
+            <br>
+            <label for="state"><b>State</b></label>
+            <input type="text" id="state" name="state" required>
+            <br>
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="phone"><b>Phone</b></label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <button type="submit" id="saveCustomerBtn">Save Customer</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+            <p id="customerError" class="error"></p> <!-- Element to display error messages -->
+        </form>
+    </div>
+    <script src="addCustomer.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
